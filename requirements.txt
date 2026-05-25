@@ -1,0 +1,22 @@
+# ─────────────────────────────────────────────────────────────────
+#  Recipe Finder with Nutrition Analysis — Python Dependencies
+#  Install all at once:  pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────────
+
+# GUI image support (show recipe photos inside the app window)
+Pillow>=10.0.0
+
+# Data tables (organise nutrition numbers into rows/columns)
+pandas>=2.0.0
+
+# Charts (draw the bar chart and pie chart for nutrients)
+matplotlib>=3.7.0
+
+# PDF export (save recipe as a PDF file)
+reportlab>=4.0.0
+
+# .env file support (load your API key from a safe hidden file)
+python-dotenv>=1.0.0
+
+# HTTP requests (talk to the Spoonacular website API)
+requests>=2.31.0

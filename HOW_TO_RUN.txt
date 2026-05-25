@@ -1,0 +1,135 @@
+╔══════════════════════════════════════════════════════════════════╗
+║      🍽  Recipe Finder — HOW TO RUN (Read This First!)          ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Everything is ready. You only need to do 3 things:
+
+══════════════════════════════════════════════════════════════════
+ STEP 1 ── GET A FREE API KEY  (takes 2 minutes)
+══════════════════════════════════════════════════════════════════
+
+1. Open your browser and go to:
+      https://spoonacular.com/food-api
+
+2. Click  "Start for Free"  and create an account.
+
+3. After logging in, go to  "My Console" → "Profile"
+   and copy your API Key (a long string of letters & numbers).
+
+4. Open the file  api_handler.py  in any text editor (Notepad is fine).
+
+5. Find line 17 which looks like:
+      API_KEY = "YOUR_SPOONACULAR_API_KEY_HERE"
+
+6. Replace it with your actual key, for example:
+      API_KEY = "a1b2c3d4e5f6789012345abc"
+
+7. Save the file.
+
+
+══════════════════════════════════════════════════════════════════
+ STEP 2 ── INSTALL PYTHON  (skip if already installed)
+══════════════════════════════════════════════════════════════════
+
+Download Python from:  https://www.python.org/downloads/
+
+  • Windows : Download and run the installer.
+              ⚠️  CHECK THE BOX "Add Python to PATH" before clicking Install!
+
+  • macOS   : Download the .pkg file and install normally.
+
+  • Linux   : Run this command in terminal:
+              sudo apt install python3 python3-pip python3-tk python3-venv
+
+
+══════════════════════════════════════════════════════════════════
+ STEP 3 ── RUN THE APP
+══════════════════════════════════════════════════════════════════
+
+  Windows users
+  ─────────────
+  Double-click:  run.bat
+  (or right-click → Open)
+
+  ─── OR using Command Prompt ───
+  1. Open Command Prompt (search "cmd" in Start menu)
+  2. Type these commands one by one:
+
+     cd Desktop\RecipeFinder        ← change this to where you saved the folder
+     run.bat
+
+
+  Mac / Linux users
+  ─────────────────
+  Open Terminal and type these commands one by one:
+
+     cd ~/Desktop/RecipeFinder      ← change this to where you saved the folder
+     chmod +x run.sh
+     bash run.sh
+
+
+══════════════════════════════════════════════════════════════════
+ WHAT THE LAUNCHER DOES AUTOMATICALLY
+══════════════════════════════════════════════════════════════════
+
+  ✅  Checks your Python version
+  ✅  Creates a virtual environment (venv folder)
+  ✅  Installs all required libraries (Pillow, Pandas, Matplotlib…)
+  ✅  Checks if your API key is set
+  ✅  Launches the app window
+
+
+══════════════════════════════════════════════════════════════════
+ USING THE APP
+══════════════════════════════════════════════════════════════════
+
+  1. Type ingredients in the search box (e.g.  chicken, rice, tomato)
+  2. Optionally tick a dietary filter (Vegetarian / Vegan / Gluten Free)
+  3. Press  🔍 Search  or hit Enter
+  4. Click any recipe from the results list on the left
+  5. Click  📊 Show Nutrition  to see the calorie/macro chart
+  6. Click  ♥ Add to Favourites  to save it
+  7. Click  📄 Download PDF  to save the recipe as a PDF file
+  8. Click  🌙 Dark Mode  to switch to dark theme
+
+
+══════════════════════════════════════════════════════════════════
+ TROUBLESHOOTING
+══════════════════════════════════════════════════════════════════
+
+  Problem                   │ Fix
+  ──────────────────────────┼─────────────────────────────────────────────
+  "python not found"        │ Install Python and check "Add to PATH"
+  "tkinter not found"       │ Linux: sudo apt install python3-tk
+  HTTP 401 error            │ Your API key is wrong — recheck api_handler.py
+  HTTP 402 error            │ Free daily limit (150) reached, try tomorrow
+  No results found          │ Try simpler ingredients like  chicken  or  pasta
+  App window is blank       │ Wait 5 seconds — it's loading
+  Something crashed         │ Open  logs/recipe_app.log  for full error details
+  PDF saves as .txt         │ Run: pip install reportlab   then try again
+
+
+══════════════════════════════════════════════════════════════════
+ FILES IN THIS FOLDER
+══════════════════════════════════════════════════════════════════
+
+  run.bat          ← Double-click to launch  (Windows)
+  run.sh           ← Run in terminal          (Mac/Linux)
+  main.py          ← App entry point
+  gui.py           ← All the windows and buttons
+  api_handler.py   ← API calls to Spoonacular  ← SET YOUR KEY HERE
+  nutrition.py     ← Charts and data tables
+  logger.py        ← Saves logs to logs/recipe_app.log
+  requirements.txt ← List of libraries to install
+  HOW_TO_RUN.txt   ← This file
+
+  (Created automatically when you use the app)
+  venv/               ← Virtual environment (libraries)
+  logs/               ← Log files folder
+    recipe_app.log    ← Activity log (rotates at 1 MB, keeps 3 backups)
+  cache/              ← Downloaded recipe images (speeds up repeat views)
+  exports/            ← PDF and CSV files you save from the app
+  search_history.json ← Your past searches
+  favorites.json      ← Your saved recipes
+
+══════════════════════════════════════════════════════════════════

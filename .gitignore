@@ -1,0 +1,38 @@
+# ─────────────────────────────────────────────────────────────────
+#  .gitignore — tells Git which files NOT to upload to GitHub
+# ─────────────────────────────────────────────────────────────────
+
+# Your secret API key — NEVER upload this!
+.env
+
+# Virtual environment (big folder, can be recreated with pip install)
+venv/
+env/
+
+# Python bytecode (auto-generated, not source code)
+__pycache__/
+*.pyc
+*.pyo
+
+# Downloaded image cache
+cache/
+
+# User-generated exports (PDFs, CSVs)
+exports/
+
+# Log files (runtime data, not code)
+*.log
+logs/
+
+# User data files (personal, not code)
+search_history.json
+favorites.json
+
+# PyInstaller build output
+dist/
+build/
+*.spec
+
+# OS files
+.DS_Store
+Thumbs.db
